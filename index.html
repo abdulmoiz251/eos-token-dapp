@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="js/eosjs-api.js"></script>
+    <script src="js/eosjs-jsonrpc.js"></script>
+    <script src="js/eosjs-jssig.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/eosjs-ecc@4.0.4/lib/eosjs-ecc.min.js"></script>
+
+    <script src="js/scatterjs-core.min.js"></script>
+    <script src="js/scatterjs-plugin-eosjs2.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <style>
+      body {
+        text-align: center;
+      }
+      h2 {
+        margin-left: 10px;
+      }
+      button {
+        margin-top: 5px;
+        margin-bottom: 30px;
+        width: 20%;
+        padding: 10px;
+        font-size: 18px;
+      }
+      input {
+        width: 20%;
+        font-size: 18px;
+        height: 35px;
+      }
+    </style>
+</head>
+
+
+<body>
+  <h1 id="lblAccount"></h1>
+  <h2 id="lblBalance"></h2>
+  <br>
+
+  <input id="txtToken"  placeholder="Max Supply" type="text">
+  <br>
+  <button id="btnCreate" onclick="createToken()">Create Token</button>
+  <br>
+  
+  <input id="txtIssueTokens" placeholder="Issue Tokens" type="text">
+  <br>
+  <button id="btnIssue" onclick="issueToken()">Issue Token</button>
+  <br>
+  
+  <input id="txtTransferTokens" type="text" placeholder="Transfer Tokens">
+  <br>
+  <button id="btnTransfer" onclick="transferToken()">Transfer Token</button>
+</body>
+
+</html>
